@@ -1,2 +1,1 @@
-# ecommerce-website
-My web development project
+# my-web-development-project

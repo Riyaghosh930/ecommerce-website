@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Review Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon"><i class="fas fa-chart-line"></i></div>
+                <h2>DashBoard</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Overview</span>
+                        <div class="active-indicator"></div>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Reviews</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Analytics</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-support">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Help Center</span>
+            </div>
+        </aside>
+
+
+        <main class="main-area">
+
+            <header class="content-header">
+                <div class="header-left">
+                    <h1><i class="fa-solid fa-chart-line"></i> E‑commerce Reviews</h1>
+                    <p>Analyze and manage all your product reviews in one place with real-time insights</p>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search reviews..." />
+                    </div>
+                    <div class="profile-badge">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="avatar">RG</div>
+                    </div>
+                </div>
+            </header>
+
+
+            <div class="filters-container">
+                <div class="filter-row">
+                    <div class="filter-select">
+                        <label><i class="fa-solid fa-star"></i> Rating</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="all">All Ratings</option>
+                                <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
+                                <option value="4">⭐⭐⭐⭐ 4 Stars</option>
+                                <option value="3">⭐⭐⭐ 3 Stars</option>
+                                <option value="2">⭐⭐ 2 Stars</option>
+                                <option value="1">⭐ 1 Star</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-select">
+                        <label><i class="fa-solid fa-box"></i> Product</label>
+                        <div class="custom-select">
+                            <select>
+                                <option value="all">All Products</option>
+                                <option value="chair">Chair</option>
+                                <option value="headphones">Headphones</option>
+                                <option value="camera">Camera</option>
+                                <option value="smartwatch">Smart Watch</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn-primary"><i class="fa-solid fa-filter"></i> Apply Filters</button>
+                    <button class="btn-secondary"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                </div>
+            </div>
+
+
+            <div class="charts-section">
+                <!-- Rating Distribution Card -->
+                <div class="chart-card">
+                    <div class="card-title">
+                        <h3><i class="fas fa-chart-simple"></i> Ratings Distribution</h3>
+                        <div class="info-badge"><i class="fas fa-info-circle"></i></div>
+                            <span>Data is updated in real-time based on latest reviews</span>
+                    </div>
+                    <div class="chart-visual">
+                        
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <span class="bar-label">5 ★</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill"
+                                        style="width: 68%; background: linear-gradient(90deg, #3b82f6, #60a5fa);"></div>
+                                </div>
+                                <span class="bar-value">34</span>
+                            </div>
+                            <div class="bar-item">
+                                <span class="bar-label">4 ★</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill"
+                                        style="width: 22%; background: linear-gradient(90deg, #60a5fa, #93c5fd);"></div>
+                                </div>
+                                <span class="bar-value">11</span>
+                            </div>
+                            <div class="bar-item">
+                                <span class="bar-label">3 ★</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill"
+                                        style="width: 12%; background: linear-gradient(90deg, #93c5fd, #bfdbfe);"></div>
+                                </div>
+                                <span class="bar-value">6</span>
+                            </div>
+                            <div class="bar-item">
+                                <span class="bar-label">2 ★</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 6%; background: #bfdbfe;"></div>
+                                </div>
+                                <span class="bar-value">3</span>
+                            </div>
+                            <div class="bar-item">
+                                <span class="bar-label">1 ★</span>
+                                <div class="bar-bg">
+                                    <div class="bar-fill" style="width: 4%; background: #dbeafe;"></div>
+                                </div>
+                                <span class="bar-value">2</span>
+                            </div>
+                        </div>
+                        <div class="chart-stats-note">
+                            <span><i class="fas fa-chart-line"></i> 56 total reviews</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="chart-card">
+                    <div class="card-title">
+                        <h3><i class="fa-solid fa-chart-line"></i> Reviews Over Time</h3>
+                        <div class="info-badge"><i class="fas fa-info-circle"></i></div>
+                        <span>Review trends based on recent activity</span>
+                    </div>
+                    <div class="line-chart-mock">
+                        <div class="trend-axis">
+                            <div class="line-points">
+                                <div class="point" style="left: 5%; bottom: 20%;"></div>
+                                <div class="point" style="left: 20%; bottom: 40%;"></div>
+                                <div class="point" style="left: 35%; bottom: 30%;"></div>
+                                <div class="point" style="left: 50%; bottom: 60%;"></div>
+                                <div class="point" style="left: 70%; bottom: 50%;"></div>
+                                <div class="point" style="left: 90%; bottom: 80%;"></div>
+                                <svg class="trend-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <polyline points="5,80 20,60 35,70 50,40 70,50 90,20" stroke="#4facfe"
+                                        stroke-width="2" fill="none" stroke-linecap="round" />
+                                    <polygon points="5,80 20,60 35,70 50,40 70,50 90,20 90,100 5,100"
+                                        fill="url(#gradChart)" opacity="0.2" />
+                                    <defs>
+                                        <linearGradient id="gradChart" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#4facfe" stop-opacity="0.4" />
+                                            <stop offset="100%" stop-color="#4facfe" stop-opacity="0" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="x-labels">
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>June</span>
+                            </div>
+                        </div>
+                        <div class="trend-summary">
+                            <div class="stat-badge"><i class="fa-solid fa-arrow-up"></i> +12% growth</div>
+                            <div class="stat-badge"><i class="fa-solid fa-calendar"></i> Last 6 months</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="reviews-container">
+                <div class="reviews-header">
+                    <h2><i class="fa-solid fa-comments"></i> Recent customer reviews</h2>
+                    <div class="chip-count">12 reviews</div>
+                </div>
+
+                <div class="reviews-list">
+                    
+                    <div class="review-card-ui">
+                        <div class="review-avatar">
+                            <div class="avatar-initials">SW</div>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-top">
+                                <h4>Urban comfort co.<span class="product-badge">Chairs</span></h4>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="review-comment">"The chair quality is excellent and very comfortable for long hours. The build feels premium and the design fits perfectly in my workspace. Highly recommended!"</p>
+                            <div class="review-meta">
+                                <span><i class="fa-solid fa-user"></i> sarah_wilson</span>
+                                <span><i class="fa-solid fa-calendar-alt"></i> Jan 15, 2025</span>
+                                <span class="helpful-badge"><i class="fa-solid fa-thumbs-up"></i> 24</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="review-card-ui">
+                        <div class="review-avatar">
+                            <div class="avatar-initials">AR</div>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-top">
+                                <h4>SoundMax Audio<span class="product-badge">Headphones</span></h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="review-comment">“Amazing sound quality with deep bass. Very comfortable for long listening sessions.”</p>
+                            <div class="review-meta">
+                                <span><i class="fa-solid fa-user"></i>arjun_mehta</span>
+                                <span><i class="fa-solid fa-calendar-alt"></i> Feb 10, 2026</span>
+                                <span class="helpful-badge"><i class="fa-solid fa-thumbs-up"></i> 18</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="review-card-ui">
+                        <div class="review-avatar">
+                            <div class="avatar-initials">RK</div>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-top">
+                                <h4>PixelPro Studio<span class="product-badge">Camera</span></h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="review-comment">“Great image clarity and features. slightly heavy but performance is excellent.”</p>
+                            <div class="review-meta">
+                                <span><i class="far fa-user-circle"></i>rakesh_kumar</span>
+                                <span><i class="far fa-calendar-alt"></i> Mar 2, 2026</span>
+                                <span class="helpful-badge"><i class="fas fa-thumbs-up"></i> 12</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="review-card-ui">
+                        <div class="review-avatar">
+                            <div class="avatar-initials">NP</div>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-top">
+                                <h4>Urban comfort co.<span class="product-badge">Chairs</span></h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                   
+                                </div>
+                            </div>
+                            <p class="review-comment">“Super comfortable and ergonomic. Perfect for work-frome-home setup.”</p>
+                            <div class="review-meta">
+                                <span><i class="far fa-user-circle"></i>neha_Patel</span>
+                                <span><i class="far fa-calendar-alt"></i> Jan 25, 2026</span>
+                                <span class="helpful-badge"><i class="fas fa-thumbs-up"></i> 30</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="review-card-ui">
+                        <div class="review-avatar">
+                            <div class="avatar-initials">VS</div>
+                        </div>
+                        <div class="review-body">
+                            <div class="review-top">
+                                <h4>FitTrack Pro<span class="product-badge">Smart Watch</span></h4>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="review-comment">“Tracks fitness accurately and battery life is impressive. worth buying!”</p>
+                            <div class="review-meta">
+                                <span><i class="far fa-user-circle"></i>vikash_singh</span>
+                                <span><i class="far fa-calendar-alt"></i> Feb 28, 2026</span>
+                                <span class="helpful-badge"><i class="fas fa-thumbs-up"></i> 22</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="view-all-reviews">
+                    <span>View all reviews <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+
+            <footer class="dashboard-footer">
+                <p><i class="fa-solid fa-chart-line"></i> E-commerce Review Dashboard. Built for analytics and insights</p>
+            </footer>
+        </main>
+    </div>
+
+</body>
+
+</html>
